@@ -1,0 +1,368 @@
+/*=================
+    Start Default Styles
+=================*/
+:root {
+  --off-white: hsl(36, 100%, 99%);
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-gblue: hsl(236, 13%, 42%);
+  --very-dblue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  background-color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 73.4em;
+  margin: 0 auto;
+}
+
+/*=================
+    End Default Styles
+=================*/
+
+/*=================
+    Start Header
+=================*/
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu-btn  {
+  display: none;
+}
+
+header nav ul li a {
+  color: var(--very-dblue);
+}
+
+header nav ul li a:hover {
+  color: var(--soft-orange);
+  cursor: pointer;
+}
+
+/*=================
+    End Header
+=================*/
+
+/*=================
+    Start Main
+=================*/
+
+.main-container {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-height: 750px;
+}
+
+.main-blog {
+  grid-column: 2 span;
+  grid-row: 1 span;
+}
+
+.blog-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.blog-title {
+  font-size: 3rem;
+  color: var(--very-dblue);
+  width: 300px;
+}
+
+.blog-content {
+  color: var(--dark-gblue);
+  width: 350px;
+  line-height: 1.5;
+}
+
+.blog-read {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-read button {
+  all: unset;
+  text-transform: uppercase;
+  color: var(--off-white);
+  font-weight: 700;
+  background-color: var(--soft-red);
+  width: 43%;
+  text-align: center;
+  padding: 1rem 2rem;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-read button:hover {
+  cursor: pointer;
+  background-color: var(--very-dblue);
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+}
+
+/*=================
+    End Main
+=================*/
+
+/*=================
+    Start New
+=================*/
+
+.new {
+  grid-column: 1 span;
+  grid-row: 1 span;
+  background-color: var(--very-dblue);
+  color: aliceblue;
+}
+
+.new-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.new-container .header {
+  font-size: 2rem;
+  color: var(--soft-orange);
+}
+
+.new-container .new-blogs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.new-container .new-blogs .new-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-container .new-blogs .new-blog:not(:last-child)::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: var(--grayish-blue);
+  margin-top: 2rem;
+}
+
+.new-container .new-blogs .new-blog:last-child {
+  padding-bottom: 0.5rem;
+}
+
+.new-container .new-blogs .new-blog .new-title {
+  color: var(--off-white);
+}
+
+.new-container .new-blogs .new-blog .new-title:hover {
+  cursor: pointer;
+  color: var(--soft-orange);
+}
+
+.new-container .new-blogs .new-blog .new-content {
+  color: var(--grayish-blue);
+}
+
+/*=================
+    End New
+=================*/
+
+/*=================
+    Start Top
+=================*/
+
+.top-blogs {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 3 span;
+  grid-row: 1 span;
+  gap: 1rem;
+}
+
+.top-blogs .top-blog {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
+
+.top-blogs .top-blog img {
+  width: 6.7rem;
+}
+
+.top-blogs .top-blog .top-title {
+  color: var(--very-dblue);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.top-blogs .top-blog .top-title:hover {
+  cursor: pointer;
+  color: var(--soft-orange);
+}
+
+.top-blogs .top-blog .top-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  height: 8.5rem;
+}
+
+.top-blogs .top-blog .top-info .num {
+  color: var(--grayish-blue);
+  font-size: 2rem;
+}
+
+.top-blogs .top-blog .top-content {
+  color: var(--dark-gblue);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*=================
+    End Top
+=================*/
+
+/*===============
+    Start Footer
+================*/
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--soft-orange);
+}
+
+/*============
+    End Footer
+================*/
+
+/*===================
+    Start Media Query
+=====================*/
+
+@media (max-width: 53.4rem) {
+  body {
+    align-items: flex-start;
+  }
+  header nav {
+    padding-inline: 1rem;
+  }
+
+  header nav ul {
+    opacity: 0;
+    z-index: -99;
+    transition: all 0.3s ease-in-out;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    opacity: 1;
+    position: fixed;
+    background-color: var(--off-white);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 75vw;
+    padding: 1.25rem;
+    box-shadow: -180px 0px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+
+  .menu-btn {
+    position: fixed;
+    right: 1rem;
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn:last-child {
+    display: none;
+  }
+
+  .menu-btn button {
+    all: unset;
+    display: flex;
+    cursor: pointer;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-inline: 1rem;
+  }
+
+  .blog-info {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+  .blog-read {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .blog-content,
+  .blog-title {
+    width: 100%;
+  }
+  .top-blogs {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  footer {
+    display: none;
+  }
+}
+
+/*===================
+    End Media Query
+=====================*/
